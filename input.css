@@ -1,0 +1,86 @@
+/* ================================
+   input.css — Tailwind v4
+   No config file needed!
+   Everything lives here.
+================================ */
+
+@import "tailwindcss";
+
+/* ----- Custom Theme (replaces tailwind.config.js) ----- */
+
+@theme {
+    /* Font */
+    --font-sans: "Inter", sans-serif;
+
+    /* Brand color — change this to your Figma hex */
+    --color-primary: #4caf4f;
+    --color-primary-dark: #388e3c;
+    --color-silver: #f5f7fa;
+    --color-silver-dark: #e8ecf0;
+    --color-D_gray: #4d4d4d;
+    --color-gray: #717171;
+
+    /* Custom font sizes from Figma */
+    --text-64: 64px;
+    --leading-64: 76px;
+
+    --text-36: 36px;
+    --leading-36: 44px;
+}
+
+/* ----- Custom Reusable Classes ----- */
+
+@layer components {
+    /*------------- Navigation------------ */
+    /* Nav Links */
+    .nav-link {
+        @apply text-gray-700 hover:text-primary transition-colors duration-200 hover:underline text-sm lg:text-base font-medium underline-offset-4;
+    }
+
+    /* Hamburger Lines */
+    .hamburger-line {
+        @apply block w-6 h-0.75 bg-gray-700 transition-all duration-300;
+    }
+
+    .buttonCls {
+        @apply rounded-md px-4 py-1.5 hover:cursor-pointer text-sm transition;
+    }
+
+    .heading-2xl {
+        @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-D_gray leading-tight text-center md:text-start font-bold;
+    }
+
+    .heading-xl {
+        @apply text-3xl sm:text-3xl md:text-4xl lg:text-6xl text-D_gray font-semibold  mx-auto;
+    }
+
+    .heading-lg {
+        @apply text-3xl lg:text-3xl xl:text-4xl  text-D_gray font-semibold  mx-auto;
+    }
+
+    .subtitle-center {
+        @apply text-gray py-5 text-base text-center mx-auto;
+    }
+
+    .subtitle-left {
+        @apply text-gray py-5 text-base text-center md:text-start mx-auto;
+    }
+}
+
+/* ----- Custom CSS (things Tailwind can't do) ----- */
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Frame 36 */
+
+/* position: absolute;
+width: 1440px;
+height: 84px;
+left: 0px;
+top: 0px; */

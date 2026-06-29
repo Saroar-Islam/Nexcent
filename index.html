@@ -1,0 +1,759 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Nexcent</title>
+
+        <!-- Google Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Generated CSS -->
+        <link rel="stylesheet" href="style.css" />
+
+        <!-- swiper.js  -->
+        <link rel="stylesheet" href="./node_modules/swiper/swiper-bundle.min.css" />
+    </head>
+
+    <body class="font-sans bg-white text-gray-950 w-full">
+        <!-- header - logo and nav bar -->
+        <header class="flex justify-between h-16 px-6 md:px-8 items-center">
+            <!-- Logo -->
+            <div id="logo">
+                <a href="/" class="flex gap-1 items-center">
+                    <img src="./images/logo/Icon.svg" alt="icon" class="w-8 h-8" />
+                    <img src="./images/logo/Nexcent.svg" alt="logo" class="w-24 h-8" />
+                </a>
+            </div>
+
+            <!-- Desktop Nav -->
+            <nav>
+                <ul class="hidden lg:flex gap-8">
+                    <li><a href="/" class="nav-link">Home</a></li>
+                    <li><a href="/services" class="nav-link">Services</a></li>
+                    <li><a href="/feature" class="nav-link">Feature</a></li>
+                    <li><a href="/product" class="nav-link">Product</a></li>
+                    <li><a href="/testimonial" class="nav-link">Testimonial</a></li>
+                    <li><a href="/faq" class="nav-link">FAQ</a></li>
+                </ul>
+            </nav>
+
+            <!-- Login buttons (desktop) + Hamburger (mobile) -->
+            <div class="flex items-center gap-3">
+                <!-- Login buttons: hidden on mobile -->
+                <div id="login" class="hidden lg:flex gap-2">
+                    <button type="button" class="bg-silver hover:bg-silver-dark text-primary buttonCls">Login</button>
+                    <button type="button" class="bg-primary hover:bg-primary-dark text-silver buttonCls">
+                        Sign up
+                    </button>
+                </div>
+
+                <!-- Hamburger: mobile only -->
+                <button id="hamburger" class="lg:hidden flex flex-col gap-1.5 p-2" aria-label="Toggle menu">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <ul
+                id="mobile-menu"
+                class="flex flex-col gap-4 fixed top-16 left-0 right-0 w-full bg-white shadow-lg px-6 py-6 z-50 lg:hidden justify-center items-center transition-all duration-300 ease-in-out -translate-y-full opacity-0 pointer-events-none"
+            >
+                <li><a href="/" class="nav-link">Home</a></li>
+                <li><a href="/services" class="nav-link">Services</a></li>
+                <li><a href="/feature" class="nav-link">Feature</a></li>
+                <li><a href="/product" class="nav-link">Product</a></li>
+                <li><a href="/testimonial" class="nav-link">Testimonial</a></li>
+                <li><a href="/faq" class="nav-link">FAQ</a></li>
+                <!-- Login buttons inside mobile menu -->
+                <li class="flex gap-2 pt-2 border-t w-full justify-center">
+                    <button type="button" class="bg-silver hover:bg-silver-dark text-primary buttonCls">Login</button>
+                    <button type="button" class="bg-primary hover:bg-primary-dark text-silver buttonCls">
+                        Sign up
+                    </button>
+                </li>
+            </ul>
+        </header>
+
+        <!-- Hero Section -->
+        <section
+            class="bg-silver flex flex-col md:flex-row-reverse items-center justify-center gap-0 relative py-10 px-6 md:px-26"
+        >
+            <!-- hero image -->
+            <div class="w-full md:w-1/2 flex justify-center py-8 md:py-16">
+                <img src="./images/Illustration.png" class="w-64 h-64 md:w-96 md:h-96 object-contain" alt="HeroImg" />
+            </div>
+
+            <!-- hero tagline  -->
+            <div class="flex flex-col justify-center md:justify-start items-center md:items-start">
+                <h2 class="heading-2xl">
+                    Lesson and insights
+                    <br />
+                    <span class="text-primary"> from 8 years </span>
+                </h2>
+                <p class="subtitle-left">Where to grow your business as a photographer: site or social media?</p>
+
+                <!-- hero button -->
+                <button type="button" class="buttonCls px-4 py-2 bg-primary rounded-sm text-silver">Register</button>
+            </div>
+
+            <div class="absolute bottom-3">
+                <div class="flex gap-2">
+                    <div class="w-2 h-2 rounded-full bg-primary"></div>
+                    <div class="w-2 h-2 rounded-full bg-gray-300"></div>
+                    <div class="w-2 h-2 rounded-full bg-silver-dark"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- clients section -->
+        <section class="mt-10 text-center">
+            <!-- clients section title -->
+            <div>
+                <h2 class="heading-lg">Our clients</h2>
+
+                <p class="subtitle-center max-w-md">We have been working with some Fortune 500+ clients</p>
+            </div>
+
+            <!-- swiper slides, clients logo-->
+            <div class="max-w-7xl mx-auto pl-14 md:pl-20 pr-10 py-10">
+                <div class="swiper">
+                    <div class="swiper-wrapper items-center">
+                        <div class="swiper-slide flex justify-center items-center">
+                            <img
+                                src="./images/clients_logo/Logo-1.svg"
+                                alt="Client 1"
+                                class="h-12 w-auto object-contain grayscale hover:grayscale-0 transition duration-300"
+                            />
+                        </div>
+
+                        <div class="swiper-slide flex justify-center items-center">
+                            <img
+                                src="./images/clients_logo/Logo-2.svg"
+                                alt="Client 2"
+                                class="h-12 w-auto object-contain grayscale hover:grayscale-0 transition duration-300"
+                            />
+                        </div>
+
+                        <div class="swiper-slide flex justify-center items-center">
+                            <img
+                                src="./images/clients_logo/Logo-3.svg"
+                                alt="Client 3"
+                                class="h-12 w-auto object-contain grayscale hover:grayscale-0 transition duration-300"
+                            />
+                        </div>
+
+                        <div class="swiper-slide flex justify-center items-center">
+                            <img
+                                src="./images/clients_logo/Logo-4.svg"
+                                alt="Client 4"
+                                class="h-12 w-auto object-contain grayscale hover:grayscale-0 transition duration-300"
+                            />
+                        </div>
+
+                        <div class="swiper-slide flex justify-center items-center">
+                            <img
+                                src="./images/clients_logo/Logo-5.svg"
+                                alt="Client 5"
+                                class="h-12 w-auto object-contain grayscale hover:grayscale-0 transition duration-300"
+                            />
+                        </div>
+
+                        <div class="swiper-slide flex justify-center items-center">
+                            <img
+                                src="./images/clients_logo/Logo-6.svg"
+                                alt="Client 6"
+                                class="h-12 w-auto object-contain grayscale hover:grayscale-0 transition duration-300"
+                            />
+                        </div>
+
+                        <div class="swiper-slide flex justify-center items-center">
+                            <img
+                                src="./images/clients_logo/Logo-7.svg"
+                                alt="Client 7"
+                                class="h-12 w-auto object-contain grayscale hover:grayscale-0 transition duration-300"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- community section -->
+        <section class="mt-10 text-center">
+            <!-- community section title -->
+            <div>
+                <h2 class="heading-xl max-w-4xl lg:max-w-5xl px-10">Manage your entire community in a single system</h2>
+                <p class="subtitle-center">Who is Nextcent suitable for?</p>
+            </div>
+
+            <!------ community card  ----->
+            <div class="pt-16 pb-3 px-6 md:px-30 mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-6 justify-items-center">
+                    <!-- Card 1 -->
+                    <div
+                        class="bg-white rounded-md shadow-md hover:shadow-xl transition duration-300 p-4 flex flex-col gap-4 max-w-sm"
+                    >
+                        <div class="w-16 h-14 rounded-sm flex items-center justify-center mx-auto">
+                            <img
+                                src="./images/cummunity/membershipOrganisations.svg"
+                                alt="icon"
+                                class="w-16 h-14 object-contain block"
+                            />
+                        </div>
+
+                        <h3 class="heading-lg">Membership Organisations</h3>
+
+                        <p class="subtitle-center leading-relaxed">
+                            Our membership management software provides full automation of membership renewals and
+                            payments
+                        </p>
+                        <!--
+                        <a href="#" class="text-primary text-sm font-medium mt-auto hover:underline">Learn more →</a> -->
+                    </div>
+
+                    <!-- card 2  -->
+                    <div
+                        class="bg-white rounded-md shadow-md hover:shadow-xl transition duration-300 p-4 flex flex-col gap-4 max-w-sm"
+                    >
+                        <div class="w-16 h-14 rounded-sm flex items-center justify-center mx-auto">
+                            <img
+                                src="./images/cummunity/nationalAssociations.svg"
+                                alt="icon"
+                                class="w-16 h-14 object-contain block"
+                            />
+                        </div>
+
+                        <h3 class="heading-lg">National Associations</h3>
+
+                        <p class="subtitle-center leading-relaxed">
+                            Our membership management software provides full automation of membership renewals and
+                            payments
+                        </p>
+                        <!--
+                        <a href="#" class="text-primary text-sm font-medium mt-auto hover:underline">Learn more →</a> -->
+                    </div>
+
+                    <!-- card 3  -->
+                    <div
+                        class="bg-white rounded-md shadow-md hover:shadow-xl transition duration-300 p-4 flex flex-col gap-4 max-w-sm"
+                    >
+                        <div class="w-16 h-14 rounded-sm flex items-center justify-center mx-auto">
+                            <img
+                                src="./images/cummunity/clubsGroups.svg"
+                                alt="icon"
+                                class="w-16 h-14 object-contain block"
+                            />
+                        </div>
+
+                        <h3 class="heading-lg">Clubs And Groups</h3>
+
+                        <p class="subtitle-center leading-relaxed">
+                            Our membership management software provides full automation of membership renewals and
+                            payments
+                        </p>
+                        <!--
+                        <a href="#" class="text-primary text-sm font-medium mt-auto hover:underline">Learn more →</a> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- unlock section -->
+        <section
+            class="bg-white flex flex-col lg:flex-row items-center justify-center gap-0 py-2 lg:py-10 px-6 lg:px-26"
+        >
+            <!-- unlock section image -->
+            <div class="w-full lg:w-1/2 flex justify-center py-10 lg:py-2">
+                <img src="./images/unlock.svg" class="w-92 h-64 lg:w-130 lg:h-120 object-contain" alt="unlockImg" />
+            </div>
+
+            <!-- unloack tagline  -->
+            <div class="w-full lg:w-1/2 flex flex-col justify-center lg:justify-start items-center lg:items-start">
+                <h2 class="heading-lg max-w-5xl text-center lg:text-start">
+                    The unseen of spending three years at Pixelgrade
+                </h2>
+                <p class="subtitle-left max-w-2xl">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet justo ipsum. Sed accumsan quam
+                    vitae est varius fringilla. Pellentesque placerat vestibulum lorem sed porta. Nullam mattis
+                    tristique iaculis. Nullam pulvinar sit amet risus pretium auctor. Etiam quis massa pulvinar, aliquam
+                    quam vitae, tempus sem. Donec elementum pulvinar odio.
+                </p>
+
+                <!-- unlock button -->
+                <button type="button" class="buttonCls px-6 md:px-8 py-2 md:py-4 bg-primary rounded-sm text-silver">
+                    Learn More
+                </button>
+            </div>
+        </section>
+
+        <!-- Achievements Section -->
+        <section class="bg-gray-50 py-16 px-6 mt-10 lg:mt-2">
+            <div class="max-w-6xl mx-auto flex flex-col xl:flex-row items-center gap-12">
+                <!-- achievement section- heading and tagline -->
+                <div class="flex-1">
+                    <h2 class="heading-lg text-D_gray">
+                        Helping a local
+                        <br />
+                        <span class="text-primary"> business reinvent itself </span>
+                    </h2>
+                    <p class="subtitle-left text-gray-900 text-base">
+                        We reached here with our hard work and dedication
+                    </p>
+                </div>
+
+                <!-- achievement Stats Grid -->
+                <div class="flex-1 grid sm:grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-1 justify-items-start">
+                    <!-- Card 1 -->
+                    <div class="p-6 flex justify-center items-start gap-5">
+                        <div class="shrink-0 w-16 h-16">
+                            <img src="./images//achievements//members.svg" alt="members" class="w-full h-full block" />
+                        </div>
+
+                        <div class="text-3xl font-bold text-D_gray">
+                            <h2>2,245,341</h2>
+
+                            <p class="text-sm text-gray-500 font-light">Members</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="p-6 flex justify-center items-start gap-5">
+                        <div class="shrink-0 w-20 h-20 -mt-1.5">
+                            <img src="./images//achievements//clubs.png" alt="clubs" class="w-full h-full block" />
+                        </div>
+
+                        <div class="text-3xl font-bold text-D_gray">
+                            <h2>46,328</h2>
+
+                            <p class="text-sm text-gray-500 font-light">Clubs</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="p-6 flex justify-center items-start gap-5">
+                        <div class="shrink-0 w-16 h-16">
+                            <img
+                                src="./images//achievements//eventBookings.svg"
+                                alt="Happy clients"
+                                class="w-full h-full block"
+                            />
+                        </div>
+
+                        <div class="text-3xl font-bold text-D_gray">
+                            <h2>828,867</h2>
+
+                            <p class="text-sm text-gray-500 font-light">Event Bookings</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="p-6 flex justify-center items-start gap-5">
+                        <div class="shrink-0 w-16 h-16">
+                            <img
+                                src="./images//achievements//payments.svg"
+                                alt="Happy clients"
+                                class="w-full"
+                                h-full
+                                block
+                            />
+                        </div>
+
+                        <div class="text-3xl font-bold text-D_gray">
+                            <h2>1,926,436</h2>
+
+                            <p class="text-sm text-gray-500 font-light">Payments</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- calender section  -->
+        <section
+            class="bg-white flex flex-col lg:flex-row items-center justify-center gap-0 py-2 lg:py-10 px-6 lg:px-26 mt-10"
+        >
+            <!-- unlock section image -->
+            <div class="w-full lg:w-1/2 flex justify-center py-10 lg:py-2">
+                <img src="./images/calender.svg" class="w-92 h-64 lg:w-130 lg:h-120 object-contain" alt="unlockImg" />
+            </div>
+
+            <!-- unloack tagline  -->
+            <div class="w-full lg:w-1/2 flex flex-col justify-center lg:justify-start items-center lg:items-start">
+                <h2 class="heading-lg max-w-5xl text-center lg:text-start">
+                    How to design your site footer like we did
+                </h2>
+                <p class="subtitle-left max-w-2xl">
+                    Donec a eros justo. Fusce egestas tristique ultrices. Nam tempor, augue nec tincidunt molestie,
+                    massa nunc varius arcu, at scelerisque elit erat a magna. Donec quis erat at libero ultrices mollis.
+                    In hac habitasse platea dictumst. Vivamus vehicula leo dui, at porta nisi facilisis finibus. In
+                    euismod augue vitae nisi ultricies, non aliquet urna tincidunt. Integer in nisi eget nulla commodo
+                    faucibus efficitur quis massa. Praesent felis est, finibus et nisi ac, hendrerit venenatis libero.
+                    Donec consectetur faucibus ipsum id gravida.
+                </p>
+
+                <!-- unlock button -->
+                <button type="button" class="buttonCls px-6 md:px-8 py-2 md:py-4 bg-primary rounded-sm text-silver">
+                    Learn More
+                </button>
+            </div>
+        </section>
+
+        <!-- customers section -->
+        <section class="bg-silver mt-10">
+            <div
+                class="flex flex-col lg:flex-row gap-6 lg:gap-12 px-10 lg:px-6 py-10 max-w-6xl mx-auto justify-center items-center lg:justify-start lg:items-start"
+            >
+                <!-- customers main img -->
+                <div class="w-82">
+                    <img
+                        src="./images/customersMainImg.png"
+                        alt="Tim Smith"
+                        class="w-full h-full object-contain rounded-lg block"
+                    />
+                </div>
+
+                <!-- customer comment, name, subtitle -->
+                <div class="flex-1">
+                    <!-- comment -->
+                    <p class="text-base text-gray-500 leading-relaxed mb-5 font-semibold">
+                        Maecenas dignissim justo eget nulla rutrum molestie. Maecenas lobortis sem dui, vel rutrum risus
+                        tincidunt ullamcorper. Proin eu enim metus. Vivamus sed libero ornare, tristique quam in,
+                        gravida enim. Nullam ut molestie arcu, at hendrerit elit. Morbi laoreet elit at ligula molestie,
+                        nec molestie mi blandit. Suspendisse cursus tellus sed augue ultrices, quis tristique nulla
+                        sodales. Suspendisse eget lorem eu turpis vestibulum pretium. Suspendisse potenti. Quisque
+                        malesuada enim sapien, vitae placerat ante feugiat eget. Quisque vulputate odio neque, eget
+                        efficitur libero condimentum id. Curabitur id nibh id sem dignissim finibus ac sit amet magna.
+                    </p>
+
+                    <!-- Customer name -->
+                    <p class="text-2xl font-semibold text-primary">Tim Smith</p>
+
+                    <!-- Subtitle -->
+                    <p class="text-xs text-gray-400 mb-6">British Dragon Boat Racing Association</p>
+
+                    <!-- Logos + Meet all customers -->
+                    <div class="flex flex-wrap items-center gap-5">
+                        <img src="./images/clients_logo/Logo-1.svg" alt="Logo 1" class="h-10 w-10 object-contain" />
+                        <img src="./images/clients_logo/Logo-2.svg" alt="Logo 2" class="h-8 w-8 object-contain" />
+                        <img src="./images/clients_logo/Logo-3.svg" alt="Logo 3" class="h-8 w-8 object-contain" />
+                        <img src="./images/clients_logo/Logo-4.svg" alt="Logo 4" class="h-8 w-8 object-contain" />
+                        <img src="./images/clients_logo/Logo-5.svg" alt="Logo 5" class="h-8 w-8 object-contain" />
+                        <img src="./images/clients_logo/Logo-6.svg" alt="Logo 6" class="h-8 w-8 object-contain" />
+                        <img src="./images/clients_logo/Logo-7.svg" alt="Logo 7" class="h-8 w-8 object-contain" />
+
+                        <a
+                            href="#"
+                            class="flex items-center gap-1 text-sm font-semibold text-green-600 hover:text-green-700 transition-colors ml-1"
+                        >
+                            Meet all customers
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path
+                                    d="M3 8H13M9 4L13 8L9 12"
+                                    stroke="currentColor"
+                                    stroke-width="1.8"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- cummunity updates -->
+        <section class="py-16 px-6">
+            <!-- Header -->
+            <div class="text-center">
+                <h2 class="heading-lg font-bold text-gray-600">Caring is the new marketing</h2>
+                <p class="text-base text-gray-500 max-w-2xl mx-auto leading-relaxed mt-3">
+                    The Nexcent blog is the best place to read about the latest membership insights, trends and more.
+                    See who's joining the community, read about how our community are increasing their membership income
+                    and lot's more.
+                </p>
+            </div>
+
+            <!-- Cards -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-y-30 lg:gap-6 max-w-5xl mx-auto mt-8">
+                <!-- Card 1 -->
+                <div class="relative">
+                    <div class="w-78 sm:w-82 h-62 sm:h-72 mx-auto">
+                        <img
+                            src="./images/cummunityUpdates/image-1.png"
+                            alt="Blog 1"
+                            class="w-full h-full object-cover rounded-md"
+                        />
+                    </div>
+
+                    <div
+                        class="p-4 absolute z-50 -bottom-20 rounded-md bg-gray-100 w-62 sm:w-70 left-1/2 -translate-x-1/2 shadow-md"
+                    >
+                        <p class="text-lg font-semibold text-gray-600 text-center leading-snug mb-4">
+                            Creating Streamlined Safeguarding Processes with OneRen
+                        </p>
+
+                        <a
+                            href="#"
+                            class="flex items-center justify-center gap-1 text-sm font-semibold text-green-600 hover:text-green-700 transition-colors"
+                        >
+                            Readmore
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path
+                                    d="M3 8H13M9 4L13 8L9 12"
+                                    stroke="currentColor"
+                                    stroke-width="1.8"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="relative">
+                    <div class="w-78 sm:w-82 h-62 sm:h-72 mx-auto">
+                        <img
+                            src="./images/cummunityUpdates/image-2.png"
+                            alt="Blog 1"
+                            class="w-full h-full object-cover rounded-md"
+                        />
+                    </div>
+
+                    <div
+                        class="p-4 absolute z-50 -bottom-20 rounded-md bg-gray-100 w-62 sm:w-70 left-1/2 -translate-x-1/2 shadow-md"
+                    >
+                        <p class="text-lg font-semibold text-gray-600 text-center leading-snug mb-4">
+                            What are your safeguarding responsibilities and how can you manage them?
+                        </p>
+
+                        <a
+                            href="#"
+                            class="flex items-center justify-center gap-1 text-sm font-semibold text-green-600 hover:text-green-700 transition-colors"
+                        >
+                            Readmore
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path
+                                    d="M3 8H13M9 4L13 8L9 12"
+                                    stroke="currentColor"
+                                    stroke-width="1.8"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="relative">
+                    <div class="w-78 sm:w-82 h-62 sm:h-72 mx-auto">
+                        <img
+                            src="./images/cummunityUpdates/image-3.png"
+                            alt="Blog 1"
+                            class="w-full h-full object-cover rounded-md"
+                        />
+                    </div>
+
+                    <div
+                        class="p-4 absolute z-50 -bottom-20 rounded-md bg-gray-100 w-62 sm:w-70 left-1/2 -translate-x-1/2 shadow-md"
+                    >
+                        <p class="text-lg font-semibold text-gray-600 text-center leading-snug mb-4">
+                            Revamping the Membership Model with Triathlon Australia
+                        </p>
+
+                        <a
+                            href="#"
+                            class="flex items-center justify-center gap-1 text-sm font-semibold text-green-600 hover:text-green-700 transition-colors"
+                        >
+                            Readmore
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path
+                                    d="M3 8H13M9 4L13 8L9 12"
+                                    stroke="currentColor"
+                                    stroke-width="1.8"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="bg-gray-100 py-20 text-center mt-20">
+            <h2 class="text-5xl font-extrabold text-gray-800 leading-tight mb-8">
+                Pellentesque suscipit<br />fringilla libero eu.
+            </h2>
+            <a
+                href="#"
+                class="inline-flex items-center gap-2 bg-primary hover:bg-green-600 transition-colors text-white font-medium text-sm px-9 py-4 rounded-md"
+            >
+                Get a Demo
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path
+                        d="M3 8H13M9 4L13 8L9 12"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    />
+                </svg>
+            </a>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-[#263238] text-gray-300 py-14 px-6">
+            <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-10 justify-items-center">
+                <!-- Left: Logo + copyright + socials -->
+                <div
+                    class="flex flex-col gap-5 col-span-full md:col-span-1 justify-center md:justify-start items-center md:items-start"
+                >
+                    <!-- Logo -->
+                    <div id="logo ">
+                        <a href="/" class="flex gap-1 items-center">
+                            <img src="./images/logo/footerLogo.svg" alt="icon" class="w-40 h-full" />
+                        </a>
+                    </div>
+                    <p class="text-xs text-gray-400 leading-relaxed">
+                        Copyright &copy; 2020 Nexcent ltd.<br />All rights reserved
+                    </p>
+
+                    <div class="flex items-center gap-3">
+                        <!-- Instagram -->
+                        <a
+                            href="#"
+                            class="w-9 h-9 rounded-full border border-gray-600 flex items-center justify-center hover:border-white transition-colors"
+                        >
+                            <svg
+                                width="16"
+                                height="16"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                                stroke-width="1.8"
+                            >
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                                <circle cx="12" cy="12" r="4" />
+                                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+                            </svg>
+                        </a>
+
+                        <!-- Dribbble -->
+                        <a
+                            href="#"
+                            class="w-9 h-9 rounded-full border border-gray-600 flex items-center justify-center hover:border-white transition-colors"
+                        >
+                            <svg
+                                width="16"
+                                height="16"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                                stroke-width="1.8"
+                            >
+                                <circle cx="12" cy="12" r="10" />
+                                <path d="M6.5 6.5c2 3 3.5 6 4 9.5M17.5 6.5c-3 1.5-6 2-9.5 2M21 13c-3-1-6-1.5-9-1" />
+                            </svg>
+                        </a>
+
+                        <!-- Twitter/X -->
+                        <a
+                            href="#"
+                            class="w-9 h-9 rounded-full border border-gray-600 flex items-center justify-center hover:border-white transition-colors"
+                        >
+                            <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L2.25 2.25h6.988l4.27 5.646zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                                />
+                            </svg>
+                        </a>
+
+                        <!-- YouTube -->
+                        <a
+                            href="#"
+                            class="w-9 h-9 rounded-full border border-gray-600 flex items-center justify-center hover:border-white transition-colors"
+                        >
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M21.8 8s-.2-1.4-.8-2c-.8-.8-1.6-.8-2-.9C16.4 5 12 5 12 5s-4.4 0-7 .1c-.4.1-1.2.1-2 .9-.6.6-.8 2-.8 2S2 9.6 2 11.2v1.5c0 1.6.2 3.2.2 3.2s.2 1.4.8 2c.8.8 1.8.8 2.3.9C6.8 19 12 19 12 19s4.4 0 7-.2c.4-.1 1.2-.1 2-.9.6-.6.8-2 .8-2s.2-1.6.2-3.2v-1.5C22 9.6 21.8 8 21.8 8zM10 15V9l5.5 3-5.5 3z"
+                                />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Company -->
+                <div>
+                    <h4 class="text-white font-semibold mb-5">Company</h4>
+                    <ul class="flex flex-col gap-3 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-white hover:underline transition-colors">About us</a></li>
+                        <li><a href="#" class="hover:text-white hover:underline transition-colors">Blog</a></li>
+                        <li><a href="#" class="hover:text-white hover:underline transition-colors">Contact us</a></li>
+                        <li><a href="#" class="hover:text-white hover:underline transition-colors">Pricing</a></li>
+                        <li><a href="#" class="hover:text-white hover:underline transition-colors">Testimonials</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div>
+                    <h4 class="text-white font-semibold mb-5">Support</h4>
+                    <ul class="flex flex-col gap-3 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-white hover:underline transition-colors">Help center</a></li>
+                        <li>
+                            <a href="#" class="hover:text-white hover:underline transition-colors">Terms of service</a>
+                        </li>
+                        <li><a href="#" class="hover:text-white hover:underline transition-colors">Legal</a></li>
+                        <li>
+                            <a href="#" class="hover:text-white hover:underline transition-colors">Privacy policy</a>
+                        </li>
+                        <li><a href="#" class="hover:text-white hover:underline transition-colors">Status</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div
+                    class="flex flex-col col-span-full md:col-span-1 justify-center md:justify-start items-center md:items-start"
+                >
+                    <h4 class="text-white font-semibold mb-5">Stay up to date</h4>
+                    <div class="flex items-center bg-gray-700 rounded-md overflow-hidden">
+                        <input
+                            type="email"
+                            placeholder="Your email address"
+                            class="flex-1 bg-transparent text-sm text-gray-300 placeholder-gray-500 px-4 py-2.5 outline-none"
+                        />
+                        <button class="px-3 py-2.5 text-gray-400 hover:text-white transition-colors">
+                            <svg
+                                width="16"
+                                height="16"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                                stroke-width="2"
+                            >
+                                <path
+                                    d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- swiper.js  -->
+        <script src="./node_modules/swiper/swiper-bundle.min.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>

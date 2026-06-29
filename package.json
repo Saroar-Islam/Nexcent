@@ -1,0 +1,15 @@
+{
+  "name": "my-website",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "npx @tailwindcss/cli -i ./input.css -o ./style.css --watch",
+    "build": "npx @tailwindcss/cli -i ./input.css -o ./style.css --minify"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.0.0",
+    "tailwindcss": "^4.0.0"
+  },
+  "dependencies": {
+    "swiper": "^14.0.0"
+  }
+}
